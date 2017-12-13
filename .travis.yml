@@ -1,7 +1,7 @@
 language: c
 sudo: false # only for faster builds
 script:
-  - clang -coverage -O0 hello.c -o hello
+  - gcc -ftest-coverage -fprofile-arcs -O0 hello.c -o hello
   - ./hello
   - gcov hello.c
 
